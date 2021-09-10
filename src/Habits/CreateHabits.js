@@ -26,7 +26,7 @@ export default function CreateHabits({sethabitCreationDisplay}) {
         .then((res)=> {sethabitCreationDisplay(false)
             setHabitsDays([])
             setHabitName('')
-            getHabitsList(token).then((res)=> setMyHabitsList([...myHabitsList, res.data[res.data.length-1]]))})
+            getHabitsList(token).then((res)=> setMyHabitsList(res.data))})
         .catch(()=> alert('algo deu errado'))
        
     }

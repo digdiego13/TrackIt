@@ -37,10 +37,21 @@ function getHabitsList(token) {
 
 }
 
+function deleteHabitServer (id, token) {
+    const config = {
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    }
+    const promise = axios.delete(`${URL}/habits/${id}`, config)
+    return promise
+}
+
 
 export {
     tryLogin,
     tryRegistration,
     tryHabitRegistration,
-    getHabitsList
+    getHabitsList,
+    deleteHabitServer
 }
