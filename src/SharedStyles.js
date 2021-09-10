@@ -46,7 +46,7 @@ const ContentClass = styled.div`
     background-color: #E5E5E5;
     padding: 100px 30px;
     width: 100vw;
-    height: 100vh;
+    
     box-sizing: border-box;
 `
 

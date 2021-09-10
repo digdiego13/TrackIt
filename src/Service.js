@@ -26,9 +26,21 @@ function tryHabitRegistration(myHabitCreation, token) {
     return promise;
 }
 
+function getHabitsList(token) {
+    const config = {
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    }
+    const promise = axios.get(`${URL}/habits`, config);
+    return promise
+
+}
+
 
 export {
     tryLogin,
     tryRegistration,
-    tryHabitRegistration
+    tryHabitRegistration,
+    getHabitsList
 }

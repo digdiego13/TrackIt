@@ -21,6 +21,13 @@ const MyHabitsClass = styled.div`
 
     }
 `
+const Trash = styled.div`
+    color: red;
+    justify-content:flex-end;
+    border:none;
+    display:flex;
+    
+`
 
 const CreateHabitsClass = styled.div`
     background-color:white;
@@ -80,5 +87,6 @@ export {
     CreateHabitsClass,
     ButtonClass,
     MsgNoHabits,
-    ButtonDaysClass
+    ButtonDaysClass,
+    Trash
 }
