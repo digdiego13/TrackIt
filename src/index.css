@@ -51,12 +51,15 @@ table {
 
 /* General Styles*/
 
-* {
-	box-sizing: border-box;
-}
+
 
 body{
   font-family: 'Lexend Deca', sans-serif;
   font-size: 18px;
+  box-sizing: border-box;
   
+}
+
+p{
+	color: #6666;
 }
