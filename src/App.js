@@ -13,8 +13,8 @@ export default function App() {
 
   return (
     <>
-    <TokenContext.Provider value={token}>
-    <UserImageContext.Provider value={userImage}>
+    <TokenContext.Provider value={{token, setToken}}>
+    <UserImageContext.Provider value={{userImage, setUserImage}}>
     <BrowserRouter>
       <Switch>
         <Route path="/" exact>

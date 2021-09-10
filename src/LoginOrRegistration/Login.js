@@ -12,13 +12,13 @@ import TokenContext from '../Contexts/Token';
 export default function Login () {
     const [login, setLogin] = useState({});
     const history = useHistory()
-    const token = useContext(TokenContext);
+    const {setToken} = useContext(TokenContext);
 
     function signIn () {
         //devo colocar um if... se token === '', carregamento
         tryLogin(login)
         .then((res)=> {history.push("/habitos")
-        //alterar o estado de Token quando saber fazer isso.
+        setToken(res.data.token);
         } )
         .catch(()=> alert('Login ou senha incorretos'))
 

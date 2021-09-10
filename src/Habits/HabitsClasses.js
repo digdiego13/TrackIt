@@ -29,26 +29,26 @@ const CreateHabitsClass = styled.div`
     color: #DBDBDB;
     border-radius:4px;
     margin: 20px 0px;
-   
+    
 `
 const ButtonsClasses = styled.div`
     display: flex;
     gap: 4px;
     margin-top: 8px;
     margin-bottom: 36px;
-
-
-    button{
-        height:30px;
-        width:30px;
-        background-color:white;
-        color: #dbdbdb;
-        border: solid 1px gray;
-        border-radius: 4px;
-
-    }
     
 `
+
+const ButtonDaysClass = styled.button`
+    height:30px;
+    width:30px;
+    color: #dbdbdb;
+    border: solid 1px gray;
+    border-radius: 4px;
+    background-color:${(props)=> props.selectedStyle ? 'green' : "white"};
+
+`
+
 const SaveHabitsButtons = styled.div`
 
     display: flex;
@@ -79,5 +79,6 @@ export {
     SaveHabitsButtons,
     CreateHabitsClass,
     ButtonClass,
-    MsgNoHabits
+    MsgNoHabits,
+    ButtonDaysClass
 }

@@ -7,19 +7,19 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { tryRegistration } from '../Service';
 import { useHistory } from 'react-router';
+import UserImageContext from '../Contexts/UserImageContext';
 
 
 export default function Registration () {
 
     const [myRegistration, setMyRegistration] = useState({});
     const history = useHistory()
+    const {setUserImage} = useContext(UserImageContext);
     function signUp () {
-        //devo alterar o context da photo e ainda colocar as paradas carregando
-        console.log(myRegistration)
-        
+        //colocar as paradas carregando
         tryRegistration(myRegistration)
         .then((res)=> {history.push("/")
-        
+        setUserImage(myRegistration.image);
          })
         .catch(() => alert("Algo deu errado, verifique os campos!"))
     }

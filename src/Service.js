@@ -1,4 +1,7 @@
 import axios from 'axios';
+import { useContext } from 'react';
+import TokenContext from './Contexts/Token';
+
 
 const URL = "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit";
 
@@ -12,8 +15,20 @@ function tryRegistration(myRegistration) {
     return promise
 }
 
+function tryHabitRegistration(myHabitCreation, token) {
+    
+    const config = {
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    }
+    const promise = axios.post(`${URL}/habits`, myHabitCreation, config)
+    return promise;
+}
+
 
 export {
     tryLogin,
-    tryRegistration
+    tryRegistration,
+    tryHabitRegistration
 }
