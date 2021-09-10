@@ -33,6 +33,7 @@ const NavBarClass = styled.header`
     color: white;
     font-size: 39px;
     box-sizing: border-box;
+    
 
 
     img{
@@ -48,6 +49,8 @@ const ContentClass = styled.div`
     width: 100vw;
     
     box-sizing: border-box;
+
+    
 `
 
 const Footer = styled.footer`

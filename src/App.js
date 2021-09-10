@@ -5,14 +5,17 @@ import Habits from './Habits/Habits';
 import UserImageContext from './Contexts/UserImageContext';
 import { useState } from 'react';
 import TokenContext from './Contexts/Token';
+import Today from './Today/Today';
+import ProgressContext from './Contexts/ProgressContext';
 
 export default function App() {
 
   const [userImage, setUserImage] = useState('');
   const [token, setToken] = useState('');
-
+  const [progress, setProgress] = useState(0)
   return (
     <>
+    <ProgressContext.Provider value= {{progress, setProgress}}>
     <TokenContext.Provider value={{token, setToken}}>
     <UserImageContext.Provider value={{userImage, setUserImage}}>
     <BrowserRouter>
@@ -26,10 +29,14 @@ export default function App() {
         <Route path="/habitos" exact>
           <Habits></Habits>
         </Route>
+        <Route path="/hoje" exact>
+          <Today></Today>
+        </Route>
       </Switch>
     </BrowserRouter>
     </UserImageContext.Provider>
     </TokenContext.Provider>
+    </ProgressContext.Provider>
     </>
   );
 }

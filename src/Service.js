@@ -44,14 +44,50 @@ function deleteHabitServer (id, token) {
         }
     }
     const promise = axios.delete(`${URL}/habits/${id}`, config)
-    return promise
+    return promise;
 }
 
+
+function getTodayHabits (token) {
+    const config = {
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    }
+    const promise = axios.get(`${URL}/habits/today`, config);
+    return promise;
+    
+    
+}
+
+function checkHabit (id, token) {
+    const config = {
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    }
+    const promise = axios.post(`${URL}/habits/${id}/check`,[], config)
+    return promise;
+
+}
+
+function unCheckHabit(id, token) {
+    const config = {
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    }
+    const promise = axios.post(`${URL}/habits/${id}/uncheck`,[], config)
+    return promise;
+}
 
 export {
     tryLogin,
     tryRegistration,
     tryHabitRegistration,
     getHabitsList,
-    deleteHabitServer
+    deleteHabitServer,
+    getTodayHabits,
+    checkHabit,
+    unCheckHabit
 }

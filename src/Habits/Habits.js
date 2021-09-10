@@ -6,6 +6,7 @@ import { useState, useEffect, useContext } from "react";
 import HabitCreationContext from "../Contexts/HabitCreationContext"
 import HabitsList from './HabitsList'
 import TokenContext from "../Contexts/Token"
+import { Link } from "react-router-dom";
 
 
 export default function Habits () {
@@ -29,6 +30,7 @@ export default function Habits () {
         <MyHabits sethabitCreationDisplay={sethabitCreationDisplay}></MyHabits>
         {habitCreationDisplay ? <CreateHabits sethabitCreationDisplay={sethabitCreationDisplay}></CreateHabits> : ''}
         <HabitsList></HabitsList>
+        <Link to={'/hoje'}>hoje</Link>
     </ContentClass>
     </HabitCreationContext.Provider>
     </>
