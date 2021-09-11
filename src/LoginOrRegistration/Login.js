@@ -18,7 +18,7 @@ export default function Login () {
         //devo colocar um if... se token === '', carregamento
         tryLogin(login)
         .then((res)=> {setToken(res.data.token)
-            history.push("/habitos")
+            history.push("/hoje")
         ;
         } )
         .catch(()=> alert('Login ou senha incorretos'))

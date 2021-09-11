@@ -39,8 +39,8 @@ export default function CreateHabits({sethabitCreationDisplay}) {
                 {weekDays.map((day, index) => <WeekButtons day={day} index={index} habitsDays={habitsDays} setHabitsDays={setHabitsDays}></WeekButtons>)}
             </ButtonsClasses>
             <SaveHabitsButtons>
-                <ButtonClass color='blue' background='white' onClick={cancelCreation}>Cancelar</ButtonClass>
-                <ButtonClass color='white' background='blue' onClick={saveCreation}>Salvar</ButtonClass>
+                <ButtonClass color='#52B6FF' background='white' onClick={cancelCreation}>Cancelar</ButtonClass>
+                <ButtonClass color='white' background='#52B6FF' onClick={saveCreation}>Salvar</ButtonClass>
             </SaveHabitsButtons>
             
         </CreateHabitsClass>
