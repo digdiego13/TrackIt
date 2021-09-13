@@ -1,5 +1,6 @@
-import { ButtonsClasses, ButtonDaysClass} from "./HabitsClasses"
-export default function WeekButtons({habitsDays, setHabitsDays, day, index}) {
+import {ButtonDaysClass} from "./HabitsClasses"
+
+export default function WeekButtons({habitsDays, setHabitsDays, day, index, loading}) {
     let selectedStyle = false;
     habitsDays.includes(index+1) ? selectedStyle = true : selectedStyle= false;
 
@@ -9,6 +10,6 @@ export default function WeekButtons({habitsDays, setHabitsDays, day, index}) {
     }
 
     return(
-        <ButtonDaysClass selectedStyle={selectedStyle} onClick={()=>addWeekDay(index)}>{day}</ButtonDaysClass>
+        <ButtonDaysClass selectedStyle={selectedStyle} disabled={loading} onClick={()=>addWeekDay(index)}>{day}</ButtonDaysClass>
     )
 }

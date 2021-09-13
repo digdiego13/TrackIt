@@ -33,6 +33,7 @@ const NavBarClass = styled.header`
     color: white;
     font-size: 39px;
     box-sizing: border-box;
+    z-index: 1;
     
 
 
@@ -50,17 +51,20 @@ const ContentClass = styled.div`
     height: 100vh;
     box-sizing: border-box;
 
+        
     
 `
-
-const Footer = styled.footer`
-
+const LetraH1 =styled.h1`
+    color: #126BA5;
+    font-size: 23px;
 `
+
 
 
 export {
     LogoClass,
     Input,
     NavBarClass,
-    ContentClass
+    ContentClass,
+    LetraH1
 }

@@ -9,10 +9,15 @@ const Container = styled.div`
     box-sizing: border-box;
     padding: 0px 36px;
     background-color: white;
-    color: #52B6FF;
     bottom: 0px;
     left: 0px;
     right: 0px;
+    text-decoration: none;
+
+        h1{
+            color: #52B6FF;
+            text-decoration:  white underline;
+        }
 `
 
 const ProgressClass = styled.div`

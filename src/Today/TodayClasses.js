@@ -31,7 +31,7 @@ const Container = styled.div`
 
     }
     p{
-        font-size: 15px;
+        font-size: 13px;
     }
 
 `

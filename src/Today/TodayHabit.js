@@ -31,8 +31,8 @@ export default function TodayHabit({habit, todayHabits, setTodayHabits}) {
         <Container>
             <div>
                 <h1>{habit.name}</h1>
-                <p>Sequencia Atual: <SequeciaAtual done={habit.done}>{`${habit.currentSequence} dias`}</SequeciaAtual></p>
-                <p>Seu Recorde: <Recorde diff={habit.currentSequence - habit.highestSequence}>{`${habit.highestSequence} dias`}</Recorde></p>
+                <p>Sequencia Atual: <SequeciaAtual done={habit.done}>{`${habit.currentSequence} dia(s)`}</SequeciaAtual></p>
+                <p>Seu Recorde: <Recorde diff={habit.currentSequence - habit.highestSequence}>{`${habit.highestSequence} dia(s)`}</Recorde></p>
             </div>
             <CheckButton done={habit.done} onClick={changeStatusDone}><ion-icon name="checkbox"></ion-icon></CheckButton>
             

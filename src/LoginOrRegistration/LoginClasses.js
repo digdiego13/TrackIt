@@ -20,18 +20,28 @@ const LoginButton = styled.button`
     background-color: #52B6FF;
     border-radius: 3px;
     border:none;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: ${props => props.loading ? 0.4 : 1}
+
+        
 `
 const LinkLogin = styled.div`
 color: #52B6FF;
 margin-top: 30px;
 text-decoration: underline;
 `
-
+const EntrarClass = styled.p`
+    display: ${props=> props.loading ? "none" : "flex"};
+    color: white;
+    
+`
 
 
 export {
     Content,
     LoginButton,
-    LinkLogin
+    LinkLogin,
+    EntrarClass
 }

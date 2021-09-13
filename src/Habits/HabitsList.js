@@ -22,12 +22,12 @@ export default function HabitsLists() {
     }
    
     function deleteHabit (id) {
-        deleteHabitServer(id, token)
-        .then((res)=> getHabitsList(token).then((res1)=> setMyHabitsList(res1.data)))
-        .catch(()=> alert('nao foi possivel deletar o habito'));
-        
-        
-
+        const wantoToDelete = window.confirm('Realmente deseja excluir o habito?');
+        if(wantoToDelete) {
+            deleteHabitServer(id, token)
+            .then((res)=> getHabitsList(token).then((res1)=> setMyHabitsList(res1.data)))
+            .catch(()=> alert('nao foi possivel deletar o habito'))
+        }
     }
 
     console.log(myHabitsList)
@@ -51,7 +51,6 @@ export default function HabitsLists() {
              )
             
             })}
-
         <MsgNoHabits habilitado= {msgNoHabits}>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</MsgNoHabits>
         </>
     )

@@ -32,6 +32,9 @@ export default function Today () {
     function progressCalculator () {
         let qtdDone = todayHabits.filter((habit)=> habit.done === true).length;
         let percentage = (qtdDone / todayHabits.length) * 100;
+        if (isNaN(percentage)) {
+            percentage = 0;
+        }
         setProgress(percentage.toFixed(2))
         return progress;
     }
@@ -42,7 +45,7 @@ export default function Today () {
         <ContentClass>
             <NavBar></NavBar>
             <TodayClass>{dayjs().locale('pt-br').format(`dddd, DD/MM`)}</TodayClass>
-            {progressCalculator() === 0 ? 
+            {progressCalculator() == 0 ? 
             <ProgressClass>Tu nao fez nada ainda </ProgressClass>
             :
             <ProgressClass>Voce Ja fez {`${progressCalculator()}% dos habitos`}</ProgressClass>}

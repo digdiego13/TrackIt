@@ -15,7 +15,7 @@ export default function Footer () {
             <ProgressClass>
                 <Link to='/hoje'><CircularProgressbar value={progress} text="Hoje" /></Link>
             </ProgressClass>
-            <Link to='/habitos'><h1>Histórico</h1></Link>
+            <Link to='/historico'><h1>Histórico</h1></Link>
         </Container>
     )
 }

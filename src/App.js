@@ -7,7 +7,7 @@ import { useState } from 'react';
 import TokenContext from './Contexts/Token';
 import Today from './Today/Today';
 import ProgressContext from './Contexts/ProgressContext';
-
+import History from './History/History';
 export default function App() {
 
   const [userImage, setUserImage] = useState('');
@@ -31,6 +31,9 @@ export default function App() {
         </Route>
         <Route path="/hoje" exact>
           <Today></Today>
+        </Route>
+        <Route path="/historico" exact>
+          <History></History>
         </Route>
       </Switch>
     </BrowserRouter>

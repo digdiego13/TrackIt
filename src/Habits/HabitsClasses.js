@@ -33,9 +33,13 @@ const CreateHabitsClass = styled.div`
     background-color:white;
     box-sizing: border-box;
     padding: 18px 18px;
-    color: #DBDBDB;
     border-radius:4px;
     margin: 20px 0px;
+    opacity: ${props => props.loading ? 0.4 : 1};
+
+        h1{
+            color: #666666;
+        }
     
 `
 const ButtonsClasses = styled.div`
@@ -77,7 +81,13 @@ const ButtonClass = styled.div`
 `
 const MsgNoHabits = styled.p`
     color: #6666;
-    display: ${(props)=> props.habilitado ? 'initial' : 'none'}
+    display: ${(props)=> props.habilitado ? 'initial' : 'none'};
+    margin-top: 50px;
+`
+
+const SaveClass = styled.p`
+    display: ${props => props.loading ? 'none' : 'flex'};
+    color: white;
 `
 
 export {
@@ -88,5 +98,6 @@ export {
     ButtonClass,
     MsgNoHabits,
     ButtonDaysClass,
-    Trash
+    Trash,
+    SaveClass
 }
